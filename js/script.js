@@ -1,8 +1,3 @@
-/*---------------------------------------Dropbox---------------------------------------*/
-function random(){
-  
-}
-
 /*---------------------------------digitale clock & date-------------------------------*/
 var getIndiaTime = function(){
 document.getElementById("indiaTime").innerHTML = new Date().toLocaleString("en-AU", {timeZone: 'Asia/Kolkata'});
