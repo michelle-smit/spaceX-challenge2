@@ -1,0 +1,56 @@
+/*import custom font*/
+@import url('https://fonts.googleapis.com/css2?family=Cousine&display=swap');
+
+/*standaard body stijling*/
+*{margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'cousine', Arial, Helvetica, sans-serif;
+color: #ffffff;
+box-sizing: border-box;
+scroll-behavior: smooth;
+}
+
+body{
+     /*Circle hoogte*/
+    align-items: center;
+    justify-content: center;
+    min-height: 10vh;
+    /*Achtergrond kleur en padding*/
+    padding: 20px;
+    background: -webkit-linear-gradient(right, #14005c, #00011b);
+}
+
+
+
+  
+  /*--------------------------footer------------------------*/
+  .footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #f52727;
+   opacity: 80%;
+   color: white;
+   text-align: center;
+}
+ 
+
+/*---------------------------mediaquery----------------------------------*/
+@media only screen and (min-width: 520px) {
+
+}
+    
+@media only screen and (min-width: 700px) {   
+
+}
+@media only screen and (min-width: 800px) {
+
+}
+@media only screen and (min-width: 1000px) {
+   
+}
+@media only screen and (min-width: 1400px) {
+    
+}
