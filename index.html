@@ -8,32 +8,49 @@
 	</head>
 <body function="dateTime();">
 
-	<div class="grid-container">
-		<div class="item1">
-			<h1>India</h1>
-			<p id="indiaTime"></p> 
+	<div class="main_div">
+		<div class="buttons">
+		<a href="#" onclick="divVisibility('India');">India</a> | 
+		<a href="#" onclick="divVisibility('London');">London</a> | 
+		<a href="#" onclick="divVisibility('NewYork');">New York</a> | 
+		<a href="#" onclick="divVisibility('Sydney');">Sydney</a> |
+		<a href="#" onclick="divVisibility('Warsaw');">Warsaw</a> |
+		<a href="#" onclick="divVisibility('Shanghai');">Shanghai</a> 
 		</div>
-		<div class="item2">
-			<h1>London</h1>
-			<p id="londonTime"></p>
+		<div class="inner_div">
+			<div id="India" style="display: none;">
+				<h1>India</h1>
+				<p id="indiaTime"></p> 
+			</div>
+
+			<div id="London" style="display: none;">
+				<h1>London</h1>
+				<p id="londonTime"></p>
+			</div>
+
+			<div id="NewYork" style="display: none;">
+				<h1>New York</h1>
+				<p id="newyorkTime"></p>
+			</div>
+
+			<div id="Sydney" style="display: none;">
+				<h1>Sydney</h1>
+				<p id="sydneyTime"></p>
+			</div>
+
+			<div id="Warsaw" style="display: none;">
+				<h1>Warsaw</h1>
+				<p id="warsawTime"></p>
+			</div>
+
+			<div id="Shanghai" style="display: none;">
+				<h1>Shanghai</h1>
+				<p id="shanghaiTime"></p>
+			</div>
+
 		</div>
-		<div class="item3">
-			<h1>New York</h1>
-			<p id="newyorkTime"></p>
-		</div>  
-		<div class="item4">
-			<h1>Sydney</h1>
-			<p id="sydneyTime"></p>
-		</div> 
-		<div class="item5">
-			<h1>Warsaw</h1>
-			<p id="warsawTime"></p>
-		</div>
-		<div class="item6">
-			<h1>Shanghai</h1>
-			<p id="shanghaiTime"></p>
-		</div>
-	  </div>
+
+	
 
 
 

@@ -21,24 +21,26 @@ body{
     background: -webkit-linear-gradient(right, #14005c, #00011b);
 }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-gap: 10px;
-  background-color: rgb(214, 79, 0);
-  padding: 10px;
+.buttons a {
+  font-size: 16px;
+  line-height: 25px;
 }
-
-.grid-container > div {
-  background-color:  rgba(128, 0, 0, 0.8);
+.buttons a:hover {
+  cursor:pointer; 
+  font-size: 16px;
+}
+h1{
+  letter-spacing: 0.2em
+}
+#India, #London, #NewYork, #Sydney, #Warsaw, #Shanghai{
+  background-image: ;
   text-align: center;
-  padding: 20px 0;
-  font-size: 30px;
+  margin-top: 20px;
 }
-.item1, .item2, .item3, .item4, .item5, .item6{
-  grid-column-start: 2;
-  grid-column-end: 2;
-}
+#indiaTime, #londonTime, #newyorkTime, #sydneyTime, #warsawTime, #shanghaiTime{
+  font-size: 20px;
+  }
+
 
 
 
