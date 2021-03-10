@@ -1,8 +1,8 @@
+//Welkomsbericht --------------------------------------------------------------------------------------------------------
 alert("Hey Mars reiziger, Kies je (thuis)tijdzone.");
 
-
-
-var divs = ["India", "London", "NewYork", "Sydney", "Warsaw", "Shanghai", "dayMessage"];
+//zichtbare en niet zichtbare elementen wanneer geselecteerd ------------------------------------------------------------
+var divs = ["India", "London", "NewYork", "Sydney", "Warsaw", "Shanghai", "dayMessage", "shuttleBack", "shuttleLiftOff"];
     var visibleDivId = null;
     function divVisibility(divId) {
       if(visibleDivId === divId) {
@@ -117,18 +117,18 @@ if (Shanghai> 6 && Shanghai< 20) {
 }
 getshanghaiTime();
 setInterval(getshanghaiTime,1000);
-
+//Momenten op de dag meldingen ---------------------------------------------------------------------------------------
 var now = new Date();
 var hours = now.getHours();
 
 var greetings = [
    {"tod": "latenight",
-    "greet": "Wow! nog steedts wakker. Laat aan het werk?",
+    "greet": "Wow! nog steedts aan het werk. Maak het niet te laat?",
     "test": hours >= 24 || hours <= 4
   },
   {"tod":"night",
     "greet": "Goedenacht!",
-    "test": hours >= 21 || hours <= 11
+    "test": hours >= 20 || hours <= 5
   },
   {"tod":"evening",
     "greet": "Goedeavond!",
@@ -140,10 +140,10 @@ var greetings = [
   },
   {"tod":"noon",
     "greet": "Tijd om iets te gaan eten!",
-    "test": hours == 12
+    "test": hours >= 12 && hours <= 13
   },
   {"tod":"morning",
-    "greet": "Hello! Good Morning! Have a nice day.",
+    "greet": "Hey! Goedemorgen! Maak er een mooie dag van.",
     "test": hours >= 5 && hours <= 11
   }
 ];
@@ -151,3 +151,16 @@ var greetings = [
 var message = document.getElementById("message");
 message.innerHTML = greetings.find(el=>el.test).greet;
 message.className = greetings.find(el=>el.test).tod;
+//background verwisselen dag en nacht ----------------------------------------------------------------------------------
+Module.register("background", {
+  getStyles: function() {
+  var currentTime = new Date().getHours();
+  
+  if (currentTime > 5 && currentTime < 23 ){
+    return ["backgroundImage1.css"];       
+    }
+  else {
+    return ["backgroundImage2.css"];       
+    }
+  }
+});
