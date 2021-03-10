@@ -7,76 +7,91 @@
 		<link href="css/style.css" rel="stylesheet"/>
 	</head>
 <body function="dateTime();">
+	<header>
+		<div id=logo>SpaceX <a id="logo-s">Client</a></a></div>
+	</header>
+	<div id="space">
+		<img src="images/shuttle1.PNG" id= "shuttleBack">
+		<img src="images/shuttle2.PNG" id= "shuttleLiftOff">
+	</div>	
 
 	<div class="main_div">
 		<div class="buttons">
-		<a href="#" onclick="divVisibility('India');">India</a> | 
-		<a href="#" onclick="divVisibility('London');">London</a> | 
-		<a href="#" onclick="divVisibility('NewYork');">New York</a> | 
+		<a href="#" onclick="divVisibility('India');">India</a> |
+		<a href="#" onclick="divVisibility('London');">London</a> |
+		<a href="#" onclick="divVisibility('NewYork');">New York</a> |
 		<a href="#" onclick="divVisibility('Sydney');">Sydney</a> |
 		<a href="#" onclick="divVisibility('Warsaw');">Warsaw</a> |
-		<a href="#" onclick="divVisibility('Shanghai');">Shanghai</a> 
-		</div>
+		<a href="#" onclick="divVisibility('Shanghai');">Shanghai</a>
+	</div>
+		
 		<div class="inner_div">
-
-			
 			<div id="India" style="display: none;">
-				
 				<h1>India</h1>
 				<p id="indiaTime"></p>
-				<img id="night" src="images/taj-mahal-day.jpg.webp">
-				<img id="day" src="images/taj-mahal-night.jpg"> 
+				<div id="indiaImage">
+
+				</div>
 			</div>
 
 			<div id="London" style="display: none;">
-			
 				<h1>London</h1>
 				<p id="londonTime"></p>
-				<img id="night" src="images/elizabethtower-day.jpg">
-				<img id="day" src="images/elizabethtower-night.jpg">
+				<div id="londonImage">
+					
+				</div>
 			</div>
 
 			<div id="NewYork" style="display: none;">
 				<label id="lblGreetings"></label>
 				<h1>New York</h1>
 				<p id="newyorkTime"></p>
-				<img id="night" src="images/brookeline-bridge-ny-day.jpg">
-				<img id="day" src="images/brookeline-bridge-ny-night.jpg">
+				<div id="newYorkImage">
+
+				</div>
 			</div>
 
 			<div id="Sydney" style="display: none;">
 				<label id="lblGreetings"></label>
 				<h1>Sydney</h1>
 				<p id="sydneyTime"></p>
-				<img id="night" src="images/sydney-opera-house-day.jpeg">
-				<img id="day" src="images/sydney-opera-house-night.jpeg">
+				<div id="sydneyImage">
+
+				</div>
 			</div>
 
 			<div id="Warsaw" style="display: none;">
 				<label id="lblGreetings"></label>
 				<h1>Warsaw</h1>
 				<p id="warsawTime"></p>
-				<img id="night" src="images/PalaceOfSienceAndCulture-Warsaw-day.JPG">
-				<img id="day" src="images/PalaceOfSienceAndCulture-Warsaw-night.JPG">
+				<div id="warsawImage">
+
+				</div>
 			</div>
 
 			<div id="Shanghai" style="display: none;">
 				<label id="lblGreetings"></label>
 				<h1>Shanghai</h1>
 				<p id="shanghaiTime"></p>
-				<img id="night" src="images/shanghai-day.jpg">
-				<img id="day" src="images/shanghai-night.jpg">
+				<div id="shanghaiImage">
+
+				</div>
 			</div>
+
+			<br><br>
+			<div id="dayMessage">
+				<h2 id="message" class="bla"></h2>
+			  </div>
 		</div>
 
-		
-
-	
 
 
 
 
-		
+
+
+
+
 		<!--Copyright-->
 		<footer>
 			<div class="footer">
@@ -85,11 +100,12 @@
 		</footer>
 		<!--Einde Copyright-->
 	</body>
-	
+
 	<!--Insert script-->
 	<script type="text/javascript" src="js/script.js"></script>
+	<script type="text/javascript" src="js/script_imageswitch.js"></script>
 	<!--Einde insert script-->
-	
+
 </body>
 
 </html>
