@@ -5,17 +5,27 @@
 		<title>SpaceX Sleep Schedule</title>
 		<!--Stylesheet inset-->
 		<link href="css/style.css" rel="stylesheet"/>
-		<link href="css/backgroundImage1.css" rel="stylesheet"/>	
+		<link href="css/backgroundImage1.css" rel="stylesheet"/> 
+		<link href="css/backgroundImage2.css" rel="stylesheet"/>	
 	</head>
+	<!--TimeCard timezones-->
 <body function="dateTime();">
+
+	<!--logo-->
 	<header>
 		<div id=logo>SpaceX <a id="logo-s">Client</a></a></div>
 	</header>
+	<!--einde logo-->
+
+	<!--Shuttleimage css animate-->
 	<div id="space">
 		<img src="images/shuttle1.PNG" id= "shuttleBack">
 		<img src="images/shuttle2.PNG" id= "shuttleLiftOff">
 	</div>	
-	<main>
+	<!--einde animate-->
+
+	<main class="container">
+		<!--Menu tijdzones en landen-->
 		<div class="main_div">
 			<div class="buttons">
 				<a href="#" onclick="divVisibility('India');">India</a> |
@@ -25,7 +35,9 @@
 				<a href="#" onclick="divVisibility('Warsaw');">Warsaw</a> |
 				<a href="#" onclick="divVisibility('Shanghai');">Shanghai</a>
 			</div>
-			
+			<!--einde menu-->
+
+			<!--Aanroep enkele land met apparte aanroep title, tijd, afbeelding--> 
 			<div class="inner_div">
 				<div id="India" style="display: none;">
 					<h1>India</h1>
@@ -78,11 +90,14 @@
 
 					</div>
 				</div>
+				<!--einde aanroep land en tijdzone-->
 
 				<br><br>
+				<!--Dag melding afgestemd op periode van de dag-->
 				<div id="dayMessage">
 					<h2 id="message" class="bla"></h2>
 				</div>
+				<!--einde dagmelding-->
 			</div>
 		</main>
 
@@ -97,7 +112,6 @@
 
 	<!--Insert script-->
 	<script type="text/javascript" src="js/script.js"></script>
-	<script type="text/javascript" src="js/script_imageswitch.js"></script>
 	<!--Einde insert script-->
 
 </body>

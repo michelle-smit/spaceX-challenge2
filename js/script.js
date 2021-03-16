@@ -24,12 +24,11 @@ var divs = ["India", "London", "NewYork", "Sydney", "Warsaw", "Shanghai", "dayMe
         }
       }
     }
-
 /*----------------------------------------------digitale clock & date-------------------------------------------------*/
 //Aanroep id caller ----------------------------------------------------------------------------------------------------
   var India;
   var London;
-  var newYork;
+  var NewYork;
   var Sydney;
   var Warsaw;
   var Shanghai;
@@ -39,7 +38,7 @@ document.getElementById("indiaTime").innerHTML = new Date().toLocaleString("en-A
 India = new Date().toLocaleTimeString("en-AU", {hour: "2-digit", hour12: false, timeZone: 'Asia/Kolkata'});
 console.log(India);
 
-if (India> 6 && India< 20) {
+if (India>= 6 && India<= 20) {
   document.getElementById("indiaImage").innerHTML = "<img src='./images/taj-mahal-day.jpg'>";
 } else {
   document.getElementById("indiaImage").innerHTML = "<img src='./images/taj-mahal-night.jpg'>";
@@ -50,10 +49,10 @@ setInterval(getIndiaTime,1000);
 //London time -------------------------------------------------------------------------------------------------------
 var getlondonTime = function(){
   document.getElementById("londonTime").innerHTML = new Date().toLocaleString("en-AU", {hour12: false, timeZone: 'Europe/London'});
-  London = new Date().toLocaleTimeString("en-AU", {hour12: false, timeZone: 'Europe/London'});
+  London = new Date().toLocaleTimeString("en-AU", {hour: "2-digit", hour12: false, timeZone: 'Europe/London'});
   console.log(London);
 
-  if (London> 6 && London< 20) {
+  if (London>= 6 && London<= 20) {
     document.getElementById("londonImage").innerHTML = "<img src='./images/elizabethtower-day.jpg'>";
   } else {
     document.getElementById("londonImage").innerHTML = "<img src='./images/elizabethtower-night.jpg'>";
@@ -64,10 +63,10 @@ setInterval(getlondonTime,1000);
 //newYork time -------------------------------------------------------------------------------------------------------
 var getNewyorkTime = function(){
 document.getElementById("newyorkTime").innerHTML = new Date().toLocaleString("en-AU", {hour12: false, timeZone: 'America/New_York'});
-NewYork = new Date().toLocaleTimeString("en-AU", {hour12: false, timeZone: 'America/New_York'});
+NewYork = new Date().toLocaleTimeString("en-AU", {hour: "2-digit", hour12: false, timeZone: 'America/New_York'});
 console.log(NewYork);
 
-if (NewYork> 6 && NewYork< 20) {
+if (NewYork>= 6 && NewYork<= 20) {
   document.getElementById("newYorkImage").innerHTML = "<img src='./images/brookeline-bridge-ny-day.jpg'>";
 } else {
   document.getElementById("newYorkImage").innerHTML = "<img src='./images/brookeline-bridge-ny-night.jpg'>";
@@ -78,10 +77,10 @@ setInterval(getNewyorkTime,1000);
 //Sydney time ---------------------------------------------------------------------------------------------------------
 var getSydneyTime = function(){
 document.getElementById("sydneyTime").innerHTML = new Date().toLocaleString("en-AU", {hour12: false, timeZone: 'Australia/Sydney'});
-Sydney = new Date().toLocaleString("en-AU", {hour12: false, timeZone: 'Australia/Sydney'});
+Sydney = new Date().toLocaleString("en-AU", {hour: "2-digit", hour12: false, timeZone: 'Australia/Sydney'});
 console.log(Sydney);
 
-if (Sydney> 6 && Sydney< 20) {
+if (Sydney>= 6 && Sydney<= 20) {
   document.getElementById("sydneyImage").innerHTML = "<img src='./images/sydney-opera-house-day.jpeg'>";
 } else {
   document.getElementById("sydneyImage").innerHTML = "<img src='./images/sydney-opera-house-night.jpeg'>";
@@ -92,10 +91,10 @@ setInterval(getSydneyTime,1000);
 //Warsaw time --------------------------------------------------------------------------------------------------------
 var getwarsawTime = function(){
 document.getElementById("warsawTime").innerHTML = new Date().toLocaleString("en-AU", {hour12: false, timeZone: 'Europe/Warsaw'});
-Warsaw = new Date().toLocaleString("en-AU", {hour12: false, timeZone: 'Europe/Warsaw'});
+Warsaw = new Date().toLocaleString("en-AU", {hour: "2-digit", hour12: false, timeZone: 'Europe/Warsaw'});
 console.log(Warsaw);
 
-if (Warsaw> 6 && Warsaw< 20) {
+if (Warsaw>= 6 && Warsaw<= 20) {
   document.getElementById("warsawImage").innerHTML = "<img src='./images/PalaceOfSienceAndCulture-Warsaw-day.JPG'>";
 } else {
   document.getElementById("warsawImage").innerHTML = "<img src='./images/PalaceOfSienceAndCulture-Warsaw-night.JPG'>";
@@ -106,10 +105,10 @@ setInterval(getwarsawTime,1000);
 //Shanghai time ------------------------------------------------------------------------------------------------------
 var getshanghaiTime = function(){
 document.getElementById("shanghaiTime").innerHTML = new Date().toLocaleString("en-AU", {hour12: false, timeZone: 'Asia/Shanghai'});
-Shanghai = new Date().toLocaleString("en-AU", {hour12: false, timezone: 'Asia/Shanghai'});
+Shanghai = new Date().toLocaleString("en-AU", {hour: "2-digit", hour12: false, timezone: 'Asia/Shanghai'});
 console.log(Shanghai);
 
-if (Shanghai> 6 && Shanghai< 20) {
+if (Shanghai>= 6 && Shanghai<= 20) {
   document.getElementById("shanghaiImage").innerHTML = "<img src='./images/shanghai-day.jpg'>";
 } else {
   document.getElementById("shanghaiImage").innerHTML = "<img src='./images/shanghai-night.jpg'>";
@@ -120,7 +119,7 @@ setInterval(getshanghaiTime,1000);
 //Momenten op de dag meldingen ---------------------------------------------------------------------------------------
 var now = new Date();
 var hours = now.getHours();
-
+//Day  greetings during your day -------------------------------------------------------------------------------------
 var greetings = [
    {"tod": "latenight",
     "greet": "Wow! nog steedts aan het werk. Maak het niet te laat?",
@@ -147,11 +146,11 @@ var greetings = [
     "test": hours >= 5 && hours <= 11
   }
 ];
-
+//Achtergrond veranderen dag en nacht ------------------------------------------------------------------------------------
 var message = document.getElementById("message");
 message.innerHTML = greetings.find(el=>el.test).greet;
 message.className = greetings.find(el=>el.test).tod;
-//background verwisselen dag en nacht ----------------------------------------------------------------------------------
+
 Module.register("background", {
   getStyles: function() {
   var currentTime = new Date().getHours();

@@ -1,9 +1,10 @@
 /*import custom font*/
 @import url('https://fonts.googleapis.com/css2?family=Cousine&display=swap');
 
-/*standaard body stijling*/
+/*standaard body styling*/
 *{margin: 0;
 padding: 0;
+
 box-sizing: border-box;
 font-family: 'cousine', Arial, Helvetica, sans-serif;
 color: #ffffff;
@@ -12,13 +13,12 @@ scroll-behavior: smooth;
 }
 
 body{
-     /*Circle hoogte*/
     align-items: center;
     justify-content: center;
     min-height: 10vh;
-    /*Achtergrond kleur en padding*/
     padding: 20px;
 }
+/*begin logo*/
 #logo{
   line-height: 30px;
   margin-left: 5px;
@@ -38,11 +38,15 @@ body{
 #logo:hover #logo-s{
   color: #ca1010;
 }
+/*eind logo*/
+
 .buttons{
+  display: block;
   margin-left: 30%;
   margin-top: -40px;
   font-size: 1rem;
 }
+/*link stying*/
 a:link {
   color: #ffffff;
 }
@@ -61,8 +65,10 @@ a:hover {
 a:active {
   color: #be0000;
 }
-
-/*starship animation*/
+.container{
+  display: flex;
+}
+/*eerste keyframe*/
 #shuttleBack{
   position: absolute;
   margin-top: 10px;
@@ -79,11 +85,14 @@ a:active {
     top: 75px;
   }
 }
+/*einde eerste keyframe*/
+
+/*tweede keyframe*/
 #shuttleLiftOff{
   position: absolute;
   top: 100px;
-  margin-left: 20px;
-  margin-top: 80%;
+  margin-left: 20px ;
+  margin-top: 100%;
   left: 10px;
   float: left;
   height: 10rem;
@@ -109,17 +118,19 @@ a:active {
   100%{
     top: 30px;
     transform: rotate(75deg);
+  }
 }
-}
+/*einde tweede keyframe*/
+
 h1{
   letter-spacing: 0.2em
 }
 #India, #London, #NewYork, #Sydney, #Warsaw, #Shanghai{
-  background-image: ;
+  display: block;
   text-align: center;
   margin-top: 20px;
 }
-#indiaTime, #londonTime, #newyorkTime, #sydneyTime, #warsawTime, #shanghaiTime{
+#IndiaTime, #LondonTime, #NewyorkTime, #SydneyTime, #WarsawTime, #ShanghaiTime{
   font-size: 20px;
   }
 
@@ -129,7 +140,7 @@ h1{
     font-size: 40px;
   }
 h2.latenight {
-  color: purple;
+  color: rgb(0, 140, 255);
   background: none;
 }
 
@@ -239,10 +250,10 @@ h2.morning {
 @media only screen and (min-width: 700px) {
   #logo{
     line-height: 60px;
-
   }
   .buttons{
-    margin-top: -45px;
+    margin-left: 20rem;
+
   }
 
 
@@ -252,3 +263,19 @@ h2.morning {
     margin-left: -5px;
     width: 50%;
   }
+  #indiaTime, #londonTime, #newyorkTime, #sydneyTime, #warsawTime, #shanghaiTime{
+    margin-left: 60%;
+  }
+  #indiaImage, #londonImage, #newYorkImage, #sydneyImage, #warsawImage, #shanghaiImage{
+    display: block;
+    margin-left: 45%;
+    margin-right: auto;
+    width: 50%;
+  }
+  #message{
+    margin-left: 70%;
+  }
+  h1{
+    margin-left: 60%;
+  }
+}
